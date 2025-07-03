@@ -41,5 +41,7 @@ Use this sample `Dockerfile` to build and run locally:
 
 ```Dockerfile
 FROM openjdk:17-jdk-slim
-COPY BCalc.jar /app.jar
-ENTRYPOINT ["java", "-jar", "/app.jar"]
+WORKDIR /app
+COPY <application.jar> .
+EXPOSE 8080
+ENTRYPOINT ["java", "-jar", "application.jar"]
