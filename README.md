@@ -1,10 +1,10 @@
-# 🧮 BasicCalcApp
+#BasicCalcApp
 
 A lightweight Spring Boot application that provides basic arithmetic operations over REST — built for experimenting with AWS deployment pipelines using WAR, JAR, and Docker.
 
 ---
 
-## 🚀 Features
+#Features
 
 - ✖️ Multiplication
 - ➕ Addition
@@ -14,9 +14,9 @@ A lightweight Spring Boot application that provides basic arithmetic operations 
 
 ---
 
-## 📦 Endpoints
+#Endpoints
 
-| Operation   | URL Example                                           |
+| Operation   | URL Example                                            |
 |-------------|--------------------------------------------------------|
 | Multiply    | `/calc/mul?uinum1=8&uinum2=7`                          |
 | Add         | `/calc/add?uinum1=8&uinum2=7`                          |
@@ -24,7 +24,7 @@ A lightweight Spring Boot application that provides basic arithmetic operations 
 
 ---
 
-## 🔧 Tech Stack
+#Tech Stack
 
 - Java 17
 - Spring Boot
@@ -35,7 +35,7 @@ A lightweight Spring Boot application that provides basic arithmetic operations 
 
 ---
 
-## 🐳 Docker Support
+#Docker Support
 
 Use this sample `Dockerfile` to build and run locally:
 
