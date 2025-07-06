@@ -15,7 +15,7 @@ phases:
     commands:
       - echo "Preparing deploy.zip for EB..."
       - mkdir -p deploy
-      - cp target/*.jar deploy/application.jar
+      - cp target/*.war deploy/application.jar
       - zip -r deploy.zip deploy/
 
 artifacts:
