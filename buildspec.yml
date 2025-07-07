@@ -5,19 +5,19 @@ phases:
     runtime-versions:
       java: corretto17
     commands:
-      - echo "Installing Maven..."
+      - echo Installing Maven...
       - yum install -y maven
   build:
     commands:
-      - echo "Running mvn clean package..."
+      - echo Building jar...
       - mvn clean package -DskipTests
-  post_build:
-    commands:
-      - echo "Preparing deploy.zip for EB..."
-      - mkdir -p deploy
-      - cp target/*.war deploy/ROOT.war
-      - zip -r deploy.zip deploy/
+      - echo Logging in to Amazon ECR...
+      - aws --version
+      - Sorry, docker does not seem to be installed
+      - echo Building Docker image...
+      - docker build -t basiccalc-ecr .
+      - docker tag basiccalc-ecr:latest 838736784378.dkr.ecr.ap-south-1.amazonaws.com/basiccalc-ecr:latest
+      - docker push 838736784378.dkr.ecr.ap-south-1.amazonaws.com/basiccalc-ecr:latest
 
 artifacts:
-  files:
-    - deploy.zip
+  files: []
