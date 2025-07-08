@@ -13,7 +13,6 @@ phases:
       - mvn clean package -DskipTests
       - echo Logging in to Amazon ECR...
       - aws --version
-      - Sorry, docker does not seem to be installed
       - echo Building Docker image...
       - docker build -t basiccalc-ecr .
       - docker tag basiccalc-ecr:latest 838736784378.dkr.ecr.ap-south-1.amazonaws.com/basiccalc-ecr:latest
